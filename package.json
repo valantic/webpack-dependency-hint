@@ -1,6 +1,6 @@
 {
   "name": "webpack-dependency-hint",
-  "description": "",
+  "description": "A webpack plugin to output a reminder in the console.",
   "version": "0.0.1",
   "main": "index.js",
   "devDependencies": {

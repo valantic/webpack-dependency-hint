@@ -16,8 +16,9 @@
     "npm": ">=6.13.1"
   },
   "keywords": [
-    "vue",
-    "vuejs",
+    "webpack",
+    "console",
+    "dependencies",
     "valantic"
   ],
   "author": "valantic CEC Schweiz AG",

@@ -1,7 +1,7 @@
 {
   "name": "webpack-dependency-hint",
-  "description": "A webpack plugin to output a reminder in the console.",
-  "version": "0.0.1",
+  "description": "A webpack plugin to output a reminder for checking the dependencies in the console.",
+  "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
     "dayjs": "~1.10.7",
@@ -21,7 +21,7 @@
     "dependencies",
     "valantic"
   ],
-  "author": "valantic CEC Schweiz AG",
+  "author": "valantic CEC",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/valantic/webpack-dependency-hint/issues"

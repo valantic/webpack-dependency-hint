@@ -7,6 +7,11 @@ To handle the date format it uses https://day.js.org/. and the Console output ge
 
 ## Documentation
 
+### Installation
+```
+npm i webpack-dependency-hint --save-dev
+```
+
 ### Usage
 ```js
 // webpack.config.js

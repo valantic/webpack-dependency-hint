@@ -28,7 +28,7 @@ class DependencyHint {
   }
 
   apply(compiler) {
-    compiler.hooks[compilerHook].tap(
+    compiler.hooks[this.options.compilerHook].tap(
         'Dependency Update hint plugin',
         (
             stats /* stats is passed as an argument when done hook is tapped.  */

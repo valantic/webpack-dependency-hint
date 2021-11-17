@@ -15,6 +15,7 @@ class DependencyHint {
     inputFormat: 'DD.MM.YYYY',
     outputFormat: 'DD.MM.YYYY',
     warningText: 'Please consider your project manager to arrange a dependency update.',
+    compilerHook: 'afterEnvironment'
   };
 
   // Any options should be passed in the constructor of your plugin,
@@ -27,7 +28,7 @@ class DependencyHint {
   }
 
   apply(compiler) {
-    compiler.hooks.beforeRun.tap(
+    compiler.hooks[compilerHook].tap(
         'Dependency Update hint plugin',
         (
             stats /* stats is passed as an argument when done hook is tapped.  */

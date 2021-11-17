@@ -9,13 +9,13 @@ To handle the date format it uses https://day.js.org/. and the Console output ge
 
 ### Installation
 ```
-npm i webpack-dependency-hint --save-dev
+npm i @valantic/webpack-dependency-hint --save-dev
 ```
 
 ### Usage
 ```js
 // webpack.config.js
-const DependencyHint = require('webpack-dependency-hint');
+const DependencyHint = require('@valantic/webpack-dependency-hint');
 
 module.exports = {
   // ... configuration settings here ...
@@ -35,4 +35,5 @@ module.exports = {
 |**`inputFormat`**|`{String}`|`"DD.MM.YYYY"`|The input date format.|
 |**`outputFormat`**|`{String}`|`"DD.MM.YYYY"`|The output date format.|
 |**`warningText`**|`{String}`|`"Please consider your project manager to arrange a dependency update."`|The additional text that appears in the console.|
+|**`compilerHook`**|`{String}`|`"afterEnvironment"`|The webpack compiler hook (see https://webpack.js.org/api/compiler-hooks/#hooks)|
 

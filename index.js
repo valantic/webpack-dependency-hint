@@ -2,11 +2,11 @@ const dayjs = require('dayjs');
 const customParseFormat = require('dayjs/plugin/customParseFormat');
 const chalk = require('chalk');
 
-dayjs.extend(customParseFormat);
-
 const warning = chalk.bold.yellow;
 const warningItalic = chalk.bold.yellow.italic;
 const warningHeader = chalk.bold.bgYellowBright.black;
+
+dayjs.extend(customParseFormat);
 
 class DependencyHint {
   static defaultOptions = {
@@ -15,6 +15,7 @@ class DependencyHint {
     inputFormat: 'DD.MM.YYYY',
     outputFormat: 'DD.MM.YYYY',
     warningText: 'Please consider your project manager to arrange a dependency update.',
+    compilerHook: 'afterEnvironment'
   };
 
   // Any options should be passed in the constructor of your plugin,
@@ -27,7 +28,7 @@ class DependencyHint {
   }
 
   apply(compiler) {
-    compiler.hooks.done.tap(
+    compiler.hooks[this.options.compilerHook].tap(
         'Dependency Update hint plugin',
         (
             stats /* stats is passed as an argument when done hook is tapped.  */

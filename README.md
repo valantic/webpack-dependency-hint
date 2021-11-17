@@ -37,3 +37,32 @@ module.exports = {
 |**`warningText`**|`{String}`|`"Please consider your project manager to arrange a dependency update."`|The additional text that appears in the console.|
 |**`compilerHook`**|`{String}`|`"afterEnvironment"`|The webpack compiler hook (see https://webpack.js.org/api/compiler-hooks/#hooks)|
 
+### Hints
+In case you don't want to store the date manually in the webpack config you can add it to the package.json and import
+it to the webpack config.
+
+```json
+// package.json
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "description": "Your custom project",
+  "lastDependencyUpdate": "01.01.2021",
+  ...
+}
+```
+
+```js
+// webpack.config.js
+const DependencyHint = require('@valantic/webpack-dependency-hint');
+const pkg = require('./package.json');
+
+module.exports = {
+  // ... configuration settings here ...
+  plugins: [
+    new DependencyHint({
+      lastUpdate: pkg.lastDependencyUpdate,
+    })
+  ],
+};
+```

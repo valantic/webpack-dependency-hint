@@ -42,13 +42,11 @@ In case you don't want to store the date manually in the webpack config you can 
 it to the webpack config.
 
 ```json
-// package.json
 {
   "name": "your-project",
   "version": "1.0.0",
   "description": "Your custom project",
-  "lastDependencyUpdate": "01.01.2021",
-  ...
+  "lastDependencyUpdate": "01.01.2021"
 }
 ```
 

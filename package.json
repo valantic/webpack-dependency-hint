@@ -1,7 +1,7 @@
 {
   "name": "@valantic/webpack-dependency-hint",
   "description": "A webpack plugin to output a reminder for checking the dependencies in the console.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "dependencies": {
     "dayjs": "~1.10.7",
